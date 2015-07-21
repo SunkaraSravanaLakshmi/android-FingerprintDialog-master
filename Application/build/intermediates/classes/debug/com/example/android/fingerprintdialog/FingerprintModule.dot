@@ -1,0 +1,16 @@
+digraph G1 {
+  concentrate = true;
+  Cipher -> KeyStore;
+  n2 [label="FingerprintUiHelper$FingerprintUiHelperBuilder"];
+  FingerprintAuthenticationDialogFragment -> n2;
+  FingerprintAuthenticationDialogFragment -> InputMethodManager;
+  FingerprintManager -> Context;
+  n2 -> FingerprintManager;
+  InputMethodManager -> Context;
+  KeyguardManager -> Context;
+  MainActivity -> FingerprintAuthenticationDialogFragment;
+  MainActivity -> KeyguardManager;
+  MainActivity -> KeyStore;
+  MainActivity -> Cipher;
+  MainActivity -> KeyGenerator;
+}
